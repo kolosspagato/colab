@@ -1,7 +1,8 @@
 # colab
 ## afto ine ena kalo vid gia api tou oracle
-mathe foundry, hardhat 
+
 https://www.youtube.com/watch?v=Up7c8PxqfEw
+mathe foundry, hardhat 
 
 ### -X api gia to oracle
 
