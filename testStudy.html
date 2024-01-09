@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Basic user interactivity with website</h2>
+<button onclick="showNames()">show names</button>
+<button onclick="hideNames()">hide names</button>
+<div id="did" style="display:none"><p id="dem1"></p><p id="dem2"></p><p id="dem3"></p></div>
+<script>
+function showNames() 
+{document.getElementById("did").style.display = "block"}
+function hideNames() 
+{document.getElementById("did").style.display = "none"}
+let text = '{"employees":[' +
+'{"firstName":"John","lastName":"Doe" },' +
+'{"firstName":"Anna","lastName":"Smith" },' +
+'{"firstName":"Peter","lastName":"Jones" }]}';
+const obj = JSON.parse(text);
+document.getElementById("dem1").innerHTML =
+obj.employees[1].firstName + " " + obj.employees[1].lastName;
+document.getElementById("dem2").innerHTML =
+obj.employees[2].firstName + " " + obj.employees[2].lastName;
+document.getElementById("dem3").innerHTML =
+obj.employees[0].firstName + " " + obj.employees[0].lastName;
+</script>
+</body>
+</html>
