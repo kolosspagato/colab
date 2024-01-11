@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Table</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+	// Sample JSON data (replace with your own)
+const jsonData = [
+    { name: "John", age: 25, city: "New York" },
+    { name: "Alice", age: 30, city: "London" },
+    { name: "Bob", age: 22, city: "Paris" }
+];
+
+// Function to generate the table dynamically
+function generateTable(data) {
+    const table = document.createElement('table');
+
+    // Create table header
+    const header = table.createTHead();
+    const headerRow = header.insertRow();
+
+    // Extract column headers from the first data entry
+    Object.keys(data[0]).forEach(key => {
+        const th = document.createElement('th');
+        th.textContent = key;
+        headerRow.appendChild(th);
+    });
+
+    // Create table body
+    const body = table.createTBody();
+
+    // Populate the table with data
+    data.forEach(item => {
+        const row = body.insertRow();
+        Object.values(item).forEach(value => {
+            const cell = row.insertCell();
+            cell.textContent = value;
+        });
+    });
+
+    document.body.appendChild(table);
+}
+
+// Call the function with your JSON data
+generateTable(jsonData);
+	</script>
+</body>
+</html>
