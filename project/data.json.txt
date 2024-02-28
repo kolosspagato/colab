@@ -1,0 +1,7 @@
+{
+  "sensors": [
+     {"led1": "connected" , "1": "2" },
+     {"led2": "connected" , "3": "4" },
+     {"led3": "connected" , "5": "6" }
+  ]
+}

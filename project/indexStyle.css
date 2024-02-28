@@ -1,0 +1,21 @@
+table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px;
+        }
+
+        th, td{
+            border: 1px solid #dddddd;
+            text-align: center;
+            padding: 8px;	
+        }
+	header { 
+	    width: 100%;
+	    text-align:left;
+	}
+body {
+background-image: url('images/background_logo.png');
+ background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
